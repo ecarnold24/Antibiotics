@@ -6,10 +6,18 @@
 Open Prescribing (https://openprescribing.net/) is an online resource collated by the EBM DataLab at the University of Oxford. Open Prescribing collates the annoymised data on GP drugs prescriptions published monthly by NHS England and makes it more accessible to researchers and the general public. 
 
 ##  The OpenPrescribingToolkit
-This tool was developed by STP students for a programming module at the University of Manchester. This tool can be used to perform the following analysis of Open Prescribing data:<br><br>
+This tool was developed by STP students for a programming module at the University of Manchester. This tool can be used to perform the following analysis of Open Prescribing data:<br>
 1. Identification of outliers:<br>
-    *  Database entries (i.e. rows) with 0.0 prescriptions will be identified and removed from the database as these are artifacts. A surgery with 0 prescriptions, is likely to have no (or super healthy!) patients. <br>
-    *  Outliers are classified using the Interquartile range <br><br>
+    *  Database entries (i.e. rows) with zero prescriptions will be identified and removed from the database as these are artifacts. A surgery with zero prescriptions, is likely to have no (or super healthy!) patients. <br>
+    *  Outliers are classified using the interquartile range (IQR) rule i.e.<br>
+        $$ \begin {array}{c}
+        IQR = Q_3 -Q_1 \\\
+        Upper Limit (UL) = Q_3 + IQR \\\
+        Lower Limit (LL) = Q_1 - IQR \\\
+        Outliers = values > UL or < LL
+        \end{array}
+        $$
+    <br>
                 ```#Calculate IQR
 q1 = df_SF['numerator'].quantile(0.25)#Q1
 q3 = df_SF['numerator'].quantile(0.75)#Q3
