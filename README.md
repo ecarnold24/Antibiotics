@@ -9,15 +9,14 @@ Open Prescribing (https://openprescribing.net/) is an online resource collated b
 This tool was developed by STP students for a programming module at the University of Manchester. This tool can be used to perform the following analysis of Open Prescribing data:<br>
 1. Identification of outliers:<br>
     *  Database entries (i.e. rows) with zero prescriptions will be identified and removed from the database as these are artifacts. A surgery with zero prescriptions, is likely to have no (or super healthy!) patients. <br>
-    *  Outliers are classified using the interquartile range (IQR) rule i.e.<br> <br>
-    
-$$ \begin{align*}
-IQR = Q_3 -Q_1 \\\
-UL = Q_3 + IQR \\\
-LL = Q_1 - IQR \\\
-\end{align*}
-$$ <br>
-    *where,*    <br>
+    *  Outliers are classified using the interquartile range (IQR) rule i.e.<br>
+        $$ \begin{align*}
+        IQR = Q_3 -Q_1 \\
+        UL = Q_3 + IQR \\
+        LL = Q_1 - IQR \\
+        \end{align*}
+        $$ <br>
+    *where,*<br>
         UL = Upper Limit  <br>
         LL = Lower Limit <br>
         Outliers are values greater than the UL or lower than the LL<br>
