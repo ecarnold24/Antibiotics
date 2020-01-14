@@ -1,4 +1,29 @@
-## README for the programming module for the STP
+# OpenPrescribingToolkit 
+
+
+##  Background to GP prescribing data compiled by NHS England
+
+Open Prescribing (https://openprescribing.net/) is an online resource collated by the EBM DataLab at the University of Oxford. Open Prescribing collates the annoymised data on GP drugs prescriptions published monthly by NHS England and makes it more accessible to researchers and the general public. 
+
+##  The OpenPrescribingToolkit
+This tool was developed by STP students for a programming module at the University of Manchester. This tool can be used to perform the following analysis of Open Prescribing data:
+    1. Identification of outliers:
+        > i. Database entries (i.e. rows) with 0.0 prescriptions will be identified and removed from the database as these are artifacts. <b> A surgery with 0 prescriptions, is likely to have no (or super healthy!) patients.
+        > ii. Outliers are classified using the Interquartile range
+                ```#Calculate IQR
+q1 = df_SF['numerator'].quantile(0.25)#Q1
+q3 = df_SF['numerator'].quantile(0.75)#Q3
+iqr=df_SF['numerator'].quantile(0.75)-df_SF['numerator'].quantile(0.25) #calculate IQR
+print("The interquartile range:", iqr) #print IQR```
+    
+script identifies outliers within prescribing data published by NHS England
+*** add other definitions ***
+
+List of GP practises with outliers =
+plot individual practices to see if trens correspond with e.g. a new doctor joining the practise...
+
+
+
 
 # In order to run the script successfully, please download the run_pipeline_python2.7.py and the measures.csv file.
   - `run_pipeline_python2.7.py` is the python executable to run the pipeline.
