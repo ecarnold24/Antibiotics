@@ -7,9 +7,9 @@ Open Prescribing (https://openprescribing.net/) is an online resource collated b
 
 ##  The OpenPrescribingToolkit
 This tool was developed by STP students for a programming module at the University of Manchester. This tool can be used to perform the following analysis of Open Prescribing data:<br><br>
-    1. Identification of outliers:<br>
-    + Database entries (i.e. rows) with 0.0 prescriptions will be identified and removed from the database as these are artifacts. A surgery with 0 prescriptions, is likely to have no (or super healthy!) patients. <br>
-    ======]+ Outliers are classified using the Interquartile range <br><br>
+1. Identification of outliers:<br>
+    *  Database entries (i.e. rows) with 0.0 prescriptions will be identified and removed from the database as these are artifacts. A surgery with 0 prescriptions, is likely to have no (or super healthy!) patients. <br>
+    *  Outliers are classified using the Interquartile range <br><br>
                 ```#Calculate IQR
 q1 = df_SF['numerator'].quantile(0.25)#Q1
 q3 = df_SF['numerator'].quantile(0.75)#Q3
