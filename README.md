@@ -10,11 +10,11 @@ This tool was developed by STP students for a programming module at the Universi
 1. Identification of outliers:<br>
     *  Database entries (i.e. rows) with zero prescriptions will be identified and removed from the database as these are artifacts. A surgery with zero prescriptions, is likely to have no (or super healthy!) patients. <br>
     *  Outliers are classified using the interquartile range (IQR) rule i.e.<br>
-            ***IQR = Q<sub>3</sub> - Q<sub>1</sub> <br>
+            **IQR = Q<sub>3</sub> - Q<sub>1</sub> <br>
             UL = Q<sub>3</sub> + IQR <br>
             LL = Q<sub>1</sub>  - IQR  <br>
         
-        where,<br>***
+        where,<br>**
             UL = Upper Limit  <br>
             LL = Lower Limit <br>
         Outliers are values greater than the UL or lower than the LL<br>
