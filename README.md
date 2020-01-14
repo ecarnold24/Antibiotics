@@ -18,20 +18,32 @@ This tool was developed by STP students for a programming module at the Universi
             UL = Upper Limit  <br>
             LL = Lower Limit <br>
         Outliers are values greater than the UL or lower than the LL<br>
-        
-                ```#Calculate IQR
-q1 = df_SF['numerator'].quantile(0.25)#Q1
-q3 = df_SF['numerator'].quantile(0.75)#Q3
-iqr=df_SF['numerator'].quantile(0.75)-df_SF['numerator'].quantile(0.25) #calculate IQR
-print("The interquartile range:", iqr) #print IQR```<br>
+        The OpenPrescribingToolkit identifies outliers as GP surgeries with prescription values greater than the UL or lower than the LL <br>
     
-script identifies outliers within prescribing data published by NHS England
-*** add other definitions ***
+2. Plotting trends of GP practices with extreemly high or low prescription values (i.e. outliers identified in step 1)
 
-List of GP practises with outliers =
-plot individual practices to see if trens correspond with e.g. a new doctor joining the practise...
+List of GP practises with outliers = file name
+plot individual practices to see if trends correspond with e.g. a new doctor joining the practise...
 
+## User Instructions for the OpenPrescribingToolkit
 
+These can be found here ...
+
+## Tutorial/test data for the OpenPrescribingToolkit
+
+These can be found here ...
+testing documentation notes from Ian:
+1. a prescritptive list of instructions e.g. receipe
+2. if you do x, y and z; the result will be p,q r...
+3. If you do not get result p, q, r do a,b,c
+
+## TODO list
+outlier graphs
+use variables and define these at top of toolkit
+rename files and organise folder
+write testing document
+write user instructions 
+edit readme text above.
 
 
 # In order to run the script successfully, please download the run_pipeline_python2.7.py and the measures.csv file.
