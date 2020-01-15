@@ -2,7 +2,7 @@
 
 This document provides a list of the available functions within the OpenPrescribingToolkit and a brief description of their function
 
-- <b>import_OP_data(filename)<b> <br><br>
+- *import_OP_data(filename)* <br><br>
     
     This function imports an csv file (ideally downloaded from the Open Prescribing website) into a dataframe 
     for analysis in Python. To use this function replace 'filename' with the name of the file you wish to import.<br><br>
