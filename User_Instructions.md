@@ -1,8 +1,14 @@
 # Prerequisites
 
+The OpenPrescribing toolkit requires the following:
+- Juypter notebook version 6.0.1
+- Python release Python 3.7.3
+- Pandas package loaded
+- Matplotlib package loaded
 
 
 # Software Instalation
+Here we describe how to install the OpenPrescribingToolkit for use within a Juypter notebook. This package can be run from the terminal , or command line but we have chosen Jupyter notebook because of it's user friendly interface for data analysis. 
 
 ## In order to run the script successfully, please download the run_pipeline_python2.7.py and the measures.csv file.
   - `run_pipeline_python2.7.py` is the python executable to run the pipeline.
