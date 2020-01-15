@@ -37,13 +37,16 @@ These can be found here ...
 These can be found here ...
 testing documentation notes from Ian:
 1. a prescritptive list of instructions e.g. receipe
+
+Add to output examples file. Use output with a markdown to give a solid tutorial /test document
+
 2. if you do x, y and z; the result will be p,q r...
 3. If you do not get result p, q, r do a,b,c
 
 ## TODO list
 outlier graphs
-use variables and define these at top of toolkit
-rename files and organise folder
+use variables and define these at top of toolkit - done
+rename files and organise folder -
 write testing document
 write user instructions 
 edit readme text above.
