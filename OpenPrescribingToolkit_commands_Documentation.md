@@ -15,5 +15,7 @@ This document provides a list of the available functions within the OpenPrescrib
     If any GP practices are identified. The script will return the number of artifacts detected (if any), and state 
     how the datset has been analysed e.g. if the artifacts have been removed.To use this function type the command as given above. There is no need to specify the 'dataframe' as this variable has been defined by the <i>import_OP_data(filename)<i> function.<br>
 
-- **remove_OP_artifacts(dataframe)** <br>  
-    
+- **remove_OP_IQRoutliers(dataframe)** <br>  
+    This script identifies outliers within the dataset, based on IQR criteria. The lower and upper limit 
+    for outliers are displayed alongside the IQR. A boxplot for the dataset is produced and a unique list 
+    of GP surgeries with prescription outliers are listed. Any GP practices identified as having prescription outliers can be plotted using the <i>Plot_trends_pick_surgeries(data, name)<i> function.<br>
