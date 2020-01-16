@@ -12,17 +12,16 @@ This tool was developed by STP students for a programming module at the Universi
 
 Further details and explanations of the commands and functions available within the OpenPrescribingToolkit can be found within  OpenPrescribingToolkit_commands_Documentation.md.
 
-
-
-
 ## User Instructions for the OpenPrescribingToolkit
 
-These can be found here ...
+...
 
 ### Prerequisites
 
 
 ## Tutorial/test data for the OpenPrescribingToolkit
+
+These can be found within the OpenPrescribingToolkit_Output-examples.ipynb file 
 
 These can be found here ...
 testing documentation notes from Ian:
@@ -38,11 +37,10 @@ outlier graphs
 
 rename files and organise folder -
 write testing document
-write user instructions 
-edit readme text above.
+write user instructions .
 
 
 ## Contributors
-Elizabeth Arnold
+Elizabeth Arnold <br>
 Samuel Kidman
 
