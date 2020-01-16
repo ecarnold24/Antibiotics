@@ -8,7 +8,7 @@ Open Prescribing (https://openprescribing.net/) is an online resource collated b
 ##  The OpenPrescribingToolkit
 This tool was developed by STP students for a programming module at the University of Manchester. This tool can be used to perform the following analysis of Open Prescribing data:<br>
 1. Identification of GP surgeries with prescription value outliers i.e. higher or lower than normal prescriptions<br>
-2. Plotting trends of GP practices with extreemly high or low prescription values (e.g. GP surgeries identified in step 1 as having higher or lower than normal prescriptions).<br><br>
+2. Plotting trends of GP practices with extreemly high or low prescription values (e.g. GP surgeries identified in step 1 as having higher or lower than normal prescriptions).<br>
 
 Further details and explanations of the commands and functions available within the OpenPrescribingToolkit can be found within  OpenPrescribingToolkit_commands_Documentation.md.
 
