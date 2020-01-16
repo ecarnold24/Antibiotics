@@ -33,5 +33,9 @@ This document provides a list of the available functions within the OpenPrescrib
      Any GP practices identified as having prescription outliers can be plotted using the 
      *Plot_trends_pick_surgeries(data, name)* function to view one GP surgery with outliers or the 
      *Plot_trends_two_surgeries_by_IDs(data, name1, name2)* function to compare two GP surgeries.<br>
+     
+###Notes    
+     List of GP practises with outliers = file name
+plot individual practices to see if trends correspond with e.g. a new doctor joining the practise...
     
             
