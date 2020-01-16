@@ -17,11 +17,11 @@ This document provides a list of the available functions within the OpenPrescrib
 
 - **remove_OP_IQRoutliers(dataframe)** <br>  
     This script identifies outliers within the dataset, based on the interquartile range (IQR) rule i.e.<br>
-            - IQR = Q<sub>3</sub> - Q<sub>1</sub> <br>
+        *    - IQR = Q<sub>3</sub> - Q<sub>1</sub> <br>
             - UL = Q<sub>3</sub> + IQR <br>
             - LL = Q<sub>1</sub>  - IQR  <br>
         
-        *where,<br>
+        where,<br>
             UL = Upper Limit  <br>
             LL = Lower Limit <br>
         Outliers are classified as values greater than the UL or lower than the LL*<br>
