@@ -10,6 +10,13 @@ The OpenPrescribing toolkit requires the following dependencies:
 # Software Instalation
 Here we describe how to install the OpenPrescribingToolkit for use within a Juypter notebook. This package can be run from the terminal , or command line but we have chosen Jupyter notebook because of it's user friendly interface for data analysis. 
 
+testing documentation notes from Ian:
+1. a prescritptive list of instructions e.g. receipe
+
+Add to output examples file. Use output with a markdown to give a solid tutorial /test document
+
+2. if you do x, y and z; the result will be p,q r...
+3. If you do not get result p, q, r do a,b,c
 
 ***Sam's Instructions***
 
