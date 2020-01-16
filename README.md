@@ -32,10 +32,3 @@ The latest version of the OpenPrescribingToolkit is 1.0 uploaded on 16/01/2020
 Elizabeth Arnold <br>
 Samuel Kidman
 
-## TODO list
-outlier graphs
-
-rename files and organise folder -
-write testing document
-write user instructions .
-
