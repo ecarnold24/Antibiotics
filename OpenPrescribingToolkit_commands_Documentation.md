@@ -17,16 +17,17 @@ This document provides a list of the available functions within the OpenPrescrib
 
 - **remove_OP_IQRoutliers(dataframe)** <br>  
     This script identifies outliers within the dataset, based on the interquartile range (IQR) rule i.e.<br>
-        *    - IQR = Q<sub>3</sub> - Q<sub>1</sub> <br>
-            - UL = Q<sub>3</sub> + IQR <br>
-            - LL = Q<sub>1</sub>  - IQR  <br>
+    
+            * IQR = Q<sub>3</sub> - Q<sub>1</sub> <br>
+            * UL = Q<sub>3</sub> + IQR <br>
+            * LL = Q<sub>1</sub>  - IQR  <br>
         
         where,<br>
             UL = Upper Limit  <br>
             LL = Lower Limit <br>
-        Outliers are classified as values greater than the UL or lower than the LL*<br>
-        
-     The OpenPrescribingToolkit identifies outliers as GP surgeries with prescription values greater than the UL or 
+        Outliers are classified as values greater than the UL or lower than the LL*<br><br>
+            
+    The OpenPrescribingToolkit identifies outliers as GP surgeries with prescription values greater than the UL or 
      lower than the LL. This command prints the lower and upper limit values for outliers alongside the IQR. 
      A boxplot for the dataset is produced and a unique list of GP surgeries with prescription outliers are listed. 
      Any GP practices identified as having prescription outliers can be plotted using the 
