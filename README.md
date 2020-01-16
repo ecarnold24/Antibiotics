@@ -14,23 +14,23 @@ Further details and explanations of the commands and functions available within 
 
 ## User Instructions for the OpenPrescribingToolkit
 
-...
-
-### Prerequisites
-
+Please see the User_Instructions.md file for information of prerequisites and installation instructions.
 
 ## Tutorial/test data for the OpenPrescribingToolkit
 
-These can be found within the OpenPrescribingToolkit_Output-examples.ipynb file 
+Examples of the OpenPrescribingToolkit can be found within the OpenPrescribingToolkit_Output-examples.ipynb file. We recommend following these instructions with the measures.csv file included within this repository to check that the OpenPrescribingToolkit functions correctly after installation before using your own dataset.
 
-These can be found here ...
-testing documentation notes from Ian:
-1. a prescritptive list of instructions e.g. receipe
+## Liscencing Information
 
-Add to output examples file. Use output with a markdown to give a solid tutorial /test document
+TBC 
 
-2. if you do x, y and z; the result will be p,q r...
-3. If you do not get result p, q, r do a,b,c
+## Version History
+
+The latest version of the OpenPrescribingToolkit is 1.0 uploaded on 16/01/2020
+
+## Contributors
+Elizabeth Arnold <br>
+Samuel Kidman
 
 ## TODO list
 outlier graphs
@@ -38,9 +38,4 @@ outlier graphs
 rename files and organise folder -
 write testing document
 write user instructions .
-
-
-## Contributors
-Elizabeth Arnold <br>
-Samuel Kidman
 
