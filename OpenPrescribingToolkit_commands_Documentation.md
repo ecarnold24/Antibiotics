@@ -34,8 +34,25 @@ This document provides a list of the available functions within the OpenPrescrib
      *Plot_trends_pick_surgeries(data, name)* function to view one GP surgery with outliers or the 
      *Plot_trends_two_surgeries_by_IDs(data, name1, name2)* function to compare two GP surgeries.<br>
      
-###Notes    
-     List of GP practises with outliers = file name
-plot individual practices to see if trends correspond with e.g. a new doctor joining the practise...
+- **Plot_trends_all_surgeries(data)** <br>  
+    The first definition provides the user the ability to view the trends data for every surgery
+    within a particular geographical area.<br>
     
+- **Plot_trends_combined_surgeries(data)** <br>  
+    This function shows the summed prescribing information for every surgery within the geographical area for
+    a particular timepoint. This is displayed from 2014-2019<br> 
+
+- **Plot_trends_pick_surgeries** <br>
+    This function allows the user to provide the data, and provide either the name or the ID
+    of a surgery, and see the trend over time just for that surgery. This can be used as an investigational
+    tool into surgeries of interest (e.g outliers)
+
+    Note: Using organisation names are case sensitive.<br>
+    
+- **Plot_trends_two_surgeries_by_IDs(data, name1, name2)** <br>    
+    This function allows a user to pick any two surgeries and plot the prescribing information
+    on the same axis for both surgeries. This can be used to directly compare the prescribing
+    information for both surgeries.
+
+    So far, this function only works with organisation IDs and not organisation names.
             
