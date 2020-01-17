@@ -60,3 +60,110 @@ def remove_OP_IQRoutliers(dataframe):
                  '\nThis is a list of all the GP practices where antibioitc prescrition numbers have been identified as outliers:\n',
                  GPlist)
     plt.show() 
+    
+def Plot_trends_all_surgeries(data):
+    """The first definition provides the user the ability to view the trends data for every surgery
+within a particular geographical area."""
+    unique_org_ids = data['org_id'].unique() ##Get a list of the surgeries
+
+    ax = plt.gca() ##Set the default axis for the graph
+
+    for orgs_id in unique_org_ids: ##For each surgery in the list of unique surgery
+        new_dataframe = data[data['org_id'] == str(orgs_id)] ##Get a new dataframe subset just for the one surgery 
+        graph_points = new_dataframe[['date','numerator']] ##From the new dataframe, get the date and prescription number
+    
+        graph_points.plot(x='date',y='numerator', ax = ax) ##Plot date and prescriptions on same axis for all surgeries
+
+    ax.get_legend().remove() ##Remove legend from graph, as very messy.
+    plt.gcf().autofmt_xdate() ##Format the x-axis for date data
+    plt.show() ##Show the plot
+    
+def Plot_trends_combined_surgeries(data):
+    """This function shows the summed prescribing information for every surgery within the geographical area for
+a particular timepoint. This is displayed from 2014-2019"""
+    unique_date_ids = data['date'].unique() ##Get a list of all the reporting dates
+
+    dates_axis = [] ##Initiate a list for dates
+    summed_axis = [] ##Initiate a list to sum all data for that date
+
+    for dates in unique_date_ids:
+        dates_axis.append(dates) ##Append iterative dates to date_axis list
+        new_dataframe = data[data['date'] == dates] ##Subset dataframe just for iterative date
+        summed = new_dataframe['numerator'].sum() ##Sum the prescribing column
+        summed_axis.append(summed) ##Append the sum to the list
+    
+    new_df = pd.DataFrame({'date_axis':dates_axis,'summed_axis':summed_axis}) ##Turn lists into dataframe to turn into a graph
+
+    new_df.plot(x = 'date_axis', y = 'summed_axis') ##Plot new graph
+
+    plt.gcf().autofmt_xdate() ##Format date axis
+    plt.show() ##Show the plot.
+    
+def Plot_trends_pick_surgeries(data, name):
+    """This function allows the user to provide the data, and provide either the name or the ID
+of a surgery, and see the trend over time just for that surgery. This can be used as an investigational
+tool into surgeries of interest (e.g outliers)
+
+Note: Using organisation names are case sensitive"""
+    if data['org_id'].str.endswith(name).any():
+            
+        ax = plt.gca() ##Set the default axis for the graph
+    
+        new_dataframe = data[data['org_id'] == str(name)] ##Get a new dataframe subset just for the one surgery 
+        graph_points = new_dataframe[['date','numerator']] ##From the new dataframe, get the date and prescription number
+    
+        graph_points.plot(x='date',y='numerator', ax = ax) ##Plot date and prescriptions on same axis for all surgeries
+
+        ax.legend(loc = 'upper right', labels=new_dataframe.iloc[0]['org_id'])
+        plt.gcf().autofmt_xdate() ##Format the x-axis for date data
+        plt.show() ##Show the plot
+        
+    elif data['org_name'].str.endswith(name).any():
+        
+        ax = plt.gca() ##Set the default axis for the graph
+    
+        new_dataframe = data[data['org_name'] == str(name)] ##Get a new dataframe subset just for the one surgery 
+        graph_points = new_dataframe[['date','numerator']] ##From the new dataframe, get the date and prescription number
+    
+        graph_points.plot(x='date',y='numerator', ax = ax) ##Plot date and prescriptions on same axis for all surgeries
+
+        ax.legend(loc = 'upper right', labels=new_dataframe.iloc[0]['org_id'])
+        plt.gcf().autofmt_xdate() ##Format the x-axis for date data
+        plt.show() ##Show the plot
+        
+        
+    else:
+        print('Could not find surgery!')
+        
+def Plot_trends_two_surgeries_by_IDs(data, name1, name2):
+    """This function allows a user to pick any two surgeries and plot the prescribing information
+on the same axis for both surgeries. This can be used to directly compare the prescribing
+information for both surgeries.
+
+So far, this function only works with organisation IDs and not organisation names."""
+    if data['org_id'].str.endswith(name1).any() & data['org_id'].str.endswith(name2).any():
+    
+        ax = plt.gca() ##Set the default axis for the graph
+
+        for two_id in name1, name2: ##For each surgery in the list of unique surgery
+            new_dataframe = data[data['org_id'] == str(two_id)] ##Get a new dataframe subset just for the one surgery 
+            graph_points = new_dataframe[['date','numerator']] ##From the new dataframe, get the date and prescription number
+    
+            graph_points.plot(x='date',y='numerator', ax = ax) ##Plot date and prescriptions on same axis for all surgeries
+
+        new_dataframe1 = data[data['org_id'] == str(name1)] ##Get a new dataframe subset just for the one surgery 
+        legend_points1 = new_dataframe1[['org_id','org_name']] ##From the new dataframe, get the date and prescription number
+        
+        new_dataframe2 = data[data['org_id'] == str(name2)] ##Get a new dataframe subset just for the one surgery 
+        legend_points2 = new_dataframe2[['org_id','org_name']] ##From the new dataframe, get the date and prescription number
+                
+        legendname1 = legend_points1.iloc[0]['org_id'] + ', ' + legend_points1.iloc[0]['org_name']
+        legendname2 = legend_points2.iloc[0]['org_id'] + ', ' + legend_points2.iloc[0]['org_name']
+        
+        ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.2), labels=(legendname1, legendname2))
+        plt.gcf().autofmt_xdate() ##Format the x-axis for date data
+        plt.show() ##Show the plot
+    
+    else:
+        print('One of the surgery IDs is incorrect!')        
+    
