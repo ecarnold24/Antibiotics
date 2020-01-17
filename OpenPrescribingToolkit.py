@@ -37,8 +37,8 @@ def remove_OP_artifacts(dataframe):
 def remove_OP_IQRoutliers(dataframe):
     'This script identifies outliers within the dataset, based on IQR criteria'
     dataframe_Sort = dataframe.sort_values("numerator")#sort dataframe based on number of prescriptions
-    AntiP =  dataframe_Sort['numerator']>0.0 #Identify all rows with a prescription value greater than 0.0
-    df_SF = dataframe_Sort[AntiP]
+    AntiP =  dataframe_Sort['numerator']>0'/home/n89885ea/Antibiotics'.0 #Identify all rows with a prescription value greater than 0.0
+    df_SF = dataframe_Sort[AntiP]'/home/n89885ea/Antibiotics'
     #Calculate IQR
     q1 = df_SF['numerator'].quantile(0.25)#Q1
     q3 = df_SF['numerator'].quantile(0.75)#Q3
@@ -52,7 +52,7 @@ def remove_OP_IQRoutliers(dataframe):
     #count number of outliers and print message to inform the user
     NoOutliers = len(Outliers['numerator'])
     plt.boxplot(Outliers.numerator) #plot boxplot for outliers...
-    GPlist=Outliers.org_name.unique() # list unique name of practices with prescription outliers.
+    GPlist=Outliers.org_name.unique() # li'/home/n89885ea/Antibiotics'st unique name of practices with prescription outliers.
     #This list of names can be used to plot trends i.e. the graphical functions developed below.
     return print("The interquartile range:", iqr, '\nThe lower boundary for outliers is:', LowOut, 
                  '\nThe upper boundary for outliers is:', HighOut, '\nThis dataset contains', NoOutliers, 
