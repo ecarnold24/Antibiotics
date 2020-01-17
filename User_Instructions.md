@@ -3,28 +3,23 @@
 The OpenPrescribing toolkit requires the following dependencies:
 - Juypter notebook version 6.0.1
 - Python release Python 3.7.3
-- Pandas package installes
+- Pandas package installed
 - Matplotlib package installed
+- Matplotlib.pyplot package installed
 
 
-# Software Instalation
-Here we describe how to install the OpenPrescribingToolkit for use within a Juypter notebook. This package can be run from the terminal , or command line but we have chosen Jupyter notebook because of its' user friendly interface for data analysis. 
+# How to use the OpenPrescribinToolkit
+Here we describe how to access the OpenPrescribingToolkit for use within a Juypter notebook. This package can be run from the terminal , or command line but we have chosen Jupyter notebook because of its' user friendly interface for data analysis. 
 
 1. Download OpenPrescribingToolkit.py
 2. Open a new Juypter Notebook session
+3. Run the following code within juypter notebook. Please note you may need to change the filepath depending on where the downloaded OpenPrescribingToolkit.py file is saved.
 
         %run ./OpenPrescribingToolkit.py
         
-The OpenPrescrbingToolkit is ready to use!
+The OpenPrescrbingToolkit is ready to use!<br>
 
-
-testing documentation notes from Ian:
-1. a prescritptive list of instructions e.g. receipe
-
-Add to output examples file. Use output with a markdown to give a solid tutorial /test document
-
-2. if you do x, y and z; the result will be p,q r...
-3. If you do not get result p, q, r do a,b,c
+Please see OpenPrescribingToolkit_commands_Documentation.md for information about the functions within this Toolkit.
 
 ***Sam's Instructions***
 
