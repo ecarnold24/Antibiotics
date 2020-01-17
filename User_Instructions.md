@@ -8,7 +8,7 @@ The OpenPrescribing toolkit requires the following dependencies:
 - Matplotlib.pyplot package installed
 
 
-# How to use the OpenPrescribinToolkit
+# How to use the OpenPrescribingToolkit
 Here we describe how to access the OpenPrescribingToolkit for use within a Juypter notebook. This package can be run from the terminal , or command line but we have chosen Jupyter notebook because of its' user friendly interface for data analysis. 
 
 1. Download OpenPrescribingToolkit.py
