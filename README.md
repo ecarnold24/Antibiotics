@@ -16,7 +16,7 @@ Further details and explanations of the commands and functions available within 
 
 Please see the User_Instructions.md file for information of prerequisites and installation instructions.
 
-## Tutorial/test data for the OpenPrescribinOpenPrescribingToolkit_Output-examplesgToolkit
+## Tutorial/test data for the OpenPrescribingToolkit
 
 Examples of the OpenPrescribingToolkit can be found within the OpenPrescribingToolkit_Output-examples.ipynb file. We recommend following these instructions with the measures.csv file included within this repository to check that the OpenPrescribingToolkit functions correctly after installation before using your own dataset.
 
