@@ -37,8 +37,8 @@ def remove_OP_artifacts(dataframe):
 def remove_OP_IQRoutliers(dataframe):
     'This script identifies outliers within the dataset, based on IQR criteria'
     dataframe_Sort = dataframe.sort_values("numerator")#sort dataframe based on number of prescriptions
-    AntiP =  dataframe_Sort['numerator']>0'/home/n89885ea/Antibiotics'.0 #Identify all rows with a prescription value greater than 0.0
-    df_SF = dataframe_Sort[AntiP]'/home/n89885ea/Antibiotics'
+    AntiP = dataframe_Sort['numerator']>0.0 #Identify all rows with a prescription value greater than 0.0
+    df_SF = dataframe_Sort[AntiP]
     #Calculate IQR
     q1 = df_SF['numerator'].quantile(0.25)#Q1
     q3 = df_SF['numerator'].quantile(0.75)#Q3
